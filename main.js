@@ -1,5 +1,5 @@
 /* ============================================================
-   343rides — main.js
+   343ride — main.js
    1. Mobile drawer toggle
    2. Global scroll-reveal via IntersectionObserver
    No dependencies. No build step.

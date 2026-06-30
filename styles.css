@@ -1,5 +1,5 @@
 /* ============================================================
-   343rides — styles
+   343ride — styles
    Tokens, layout, components, responsive (breakpoint 720px)
    ============================================================ */
 
@@ -9,6 +9,7 @@
   --teal:#0F4F4A;
   --teal-deep:#0c413d;
   --coral:#E0633E;
+  --navy:#1B2A4A;
   --rule:rgba(14,26,31,.08);
   --rule-strong:rgba(14,26,31,.16);
   --ink-soft:rgba(14,26,31,.62);
@@ -198,13 +199,13 @@ img{max-width:100%; display:block;}
   font-size:clamp(2.4rem,5.4vw,4.1rem);
   line-height:1.06;
   letter-spacing:-.015em;
-  max-width:18ch;
+  max-width:75%;
   margin-bottom:30px;
 }
 .hero-title em{font-style:italic; color:var(--teal);}
 .hero-sub{
   font-size:1.18rem; color:var(--ink-soft);
-  max-width:50ch; margin-bottom:38px;
+  max-width:60ch; margin-bottom:38px;
 }
 .hero-actions{display:flex; gap:14px; flex-wrap:wrap;}
 
@@ -248,9 +249,8 @@ img{max-width:100%; display:block;}
 .card-list li::before{
   content:""; position:absolute; left:0; top:9px;
   width:6px; height:6px; border-radius:50%;
-  background:var(--teal);
+  background:var(--navy);
 }
-.card-primary .card-list li::before{background:var(--coral);}
 
 /* ---------- Capabilities ---------- */
 .cap-grid{
@@ -273,6 +273,17 @@ img{max-width:100%; display:block;}
   border-radius:100px;
   color:var(--ink);
 }
+
+/* Subtle "learn more" CTA link below a section grid */
+.section-more{
+  margin-top:40px;
+  text-align:right;
+}
+.section-more a{
+  font-size:.98rem; font-weight:500;
+  color:var(--teal); text-decoration:none;
+}
+.section-more a:hover{text-decoration:underline;}
 
 /* ---------- Operational rigor ---------- */
 .rigor-grid{
@@ -441,6 +452,32 @@ img{max-width:100%; display:block;}
 }
 .reveal.in{opacity:1; transform:none;}
 
+/* ---------- Capability detail pages ---------- */
+.cap-intro{
+  margin-top:20px;
+  font-size:1.18rem; color:var(--ink-soft);
+  max-width:64ch;
+}
+.cap-section{max-width:780px;}
+.cap-desc{
+  font-size:1.1rem; color:var(--ink-soft);
+  max-width:64ch; margin:0 0 24px;
+}
+.cap-section .card-list{margin-bottom:28px;}
+.cap-section .card-list li{font-size:1rem;}
+.callout{
+  padding:18px 20px;
+  background:rgba(15,79,74,.05);
+  border-left:2px solid var(--teal);
+  border-radius:3px;
+  font-size:1rem; color:var(--ink-soft); line-height:1.55;
+}
+.callout-label{
+  display:block;
+  font-size:.74rem; letter-spacing:.1em; text-transform:uppercase;
+  font-weight:600; color:var(--teal); margin-bottom:8px;
+}
+
 /* ---------- Legal pages ---------- */
 .legal{padding:64px 0 96px; max-width:760px;}
 .legal h1{
@@ -490,7 +527,8 @@ img{max-width:100%; display:block;}
 
   .hero{padding:72px 0 64px;}
   .eyebrow{margin-bottom:22px;}
-  .hero-title{margin-bottom:24px;}
+  .hero-title{max-width:100%; margin-bottom:24px;}
+  .section-more{text-align:left;}
   .hero-sub{font-size:1.08rem; margin-bottom:30px;}
   .hero-actions .btn{flex:1 1 auto;}
 
